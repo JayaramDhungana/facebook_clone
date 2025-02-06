@@ -1,3 +1,4 @@
+import 'package:facebook_clone/Screens/HomeKoHome.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -59,8 +60,8 @@ class _HomepageState extends State<Homepage>
       body: TabBarView(
         controller: _tabController,
         children: [
-          Text("This is Home Page"),
-          Text("This is friend Page"),
+          HomekoHome(),
+          Text("This is very very good"),
           Text("This is reels"),
           Text("This is Market Plaxe"),
           Text("This is Notification"),
