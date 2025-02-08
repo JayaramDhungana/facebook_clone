@@ -14,8 +14,8 @@ class HomekoHome extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 22,
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundImage: NetworkImage(
+                      "https://www.bing.com/th?id=OIP.52ZHdlcqmVv4DgeeFwDtOwHaFj&w=254&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"),
                 ),
                 SizedBox(
                   width: 10,
@@ -88,7 +88,322 @@ class HomekoHome extends StatelessWidget {
               thickness: 8,
               color: Colors.grey[500],
             ),
-            Row()
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      height: 190,
+                      width: 130,
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://www.bing.com/th?id=OIP.52ZHdlcqmVv4DgeeFwDtOwHaFj&w=254&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+                              width: 130,
+                              height: 120,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Text(
+                              "Create Story",
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          Positioned(
+                              top: 100,
+                              left: 48,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.add,
+                                  size: 40,
+                                  color: Colors.white,
+                                ),
+                              ))
+                        ],
+                      ),
+                    ),
+                    //Dosro Story ko UI
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+
+                    //Tesro UI
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.i0eTz7eFINwHIBOrMtPY_wHaLG?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.aG7NT0UXgv7goEQ0qySstQHaE8?rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                    //Next Story
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                    //Next Story
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                    //Next Story
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                    //Next Story
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                    //Next Stroy
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 190,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black)),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                              "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              height: 300,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            top: 2,
+                            left: 7,
+                            child: Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.blue, width: 3)),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Divider(
+              height: 15,
+              thickness: 8,
+              color: Colors.grey[500],
+            ),
           ],
         ),
       ),
