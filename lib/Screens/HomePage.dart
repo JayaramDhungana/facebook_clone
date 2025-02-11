@@ -1,3 +1,4 @@
+import 'package:facebook_clone/Screens/FriendPage.dart';
 import 'package:facebook_clone/Screens/HomeKoHome.dart';
 import 'package:flutter/material.dart';
 
@@ -61,7 +62,7 @@ class _HomepageState extends State<Homepage>
         controller: _tabController,
         children: [
           HomekoHome(),
-          Text("This is very very good"),
+          FriendsPage(),
           Text("This is reels"),
           Text("This is Market Plaxe"),
           Text("This is Notification"),
