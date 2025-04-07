@@ -1,6 +1,6 @@
 {
-    "name": "facebook_clone",
-    "short_name": "facebook_clone",
+    "name": "facebook_clone_up",
+    "short_name": "facebook_clone_up",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

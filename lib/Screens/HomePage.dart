@@ -1,5 +1,7 @@
-import 'package:facebook_clone/Screens/FriendPage.dart';
-import 'package:facebook_clone/Screens/HomeKoHome.dart';
+import 'package:facebook_clone_up/Screens/FriendPage.dart';
+import 'package:facebook_clone_up/Screens/HomeKoHome.dart';
+// import 'package:facebook_clone_up/crop_image/crop_image2.dart';
+import 'package:facebook_clone_up/crop_image/image_crop.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -29,34 +31,41 @@ class _HomepageState extends State<Homepage>
             Text(
               "facebook",
               style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue),
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
             ),
             Spacer(),
-            _buildIcon(Icons.add),
-            SizedBox(
-              width: 5,
+            InkWell(
+              onTap: () {
+                debugPrint("Pressed On Icon");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ImageCropperScreen()),
+                );
+              },
+              child: _buildIcon(Icons.add),
             ),
+            SizedBox(width: 5),
             _buildIcon(Icons.search_rounded),
-            SizedBox(
-              width: 5,
-            ),
-            _buildIcon(Icons.chat)
+            SizedBox(width: 5),
+            _buildIcon(Icons.chat),
           ],
         ),
         bottom: TabBar(
-            indicatorColor: Colors.blue,
-            labelColor: Colors.blue,
-            controller: _tabController,
-            tabs: [
-              Icon(Icons.home),
-              Icon(Icons.people),
-              Icon(Icons.ondemand_video_outlined),
-              Icon(Icons.house),
-              Icon(Icons.notifications),
-              Icon(Icons.menu)
-            ]),
+          indicatorColor: Colors.blue,
+          labelColor: Colors.blue,
+          controller: _tabController,
+          tabs: [
+            Icon(Icons.home),
+            Icon(Icons.people),
+            Icon(Icons.ondemand_video_outlined),
+            Icon(Icons.house),
+            Icon(Icons.notifications),
+            Icon(Icons.menu),
+          ],
+        ),
       ),
       body: TabBarView(
         controller: _tabController,
@@ -78,11 +87,7 @@ class _HomepageState extends State<Homepage>
     return Container(
       decoration: BoxDecoration(color: Colors.grey, shape: BoxShape.circle),
       padding: EdgeInsets.all(8),
-      child: Icon(
-        icon,
-        color: Colors.black,
-        size: 15,
-      ),
+      child: Icon(icon, color: Colors.black, size: 15),
     );
   }
 }

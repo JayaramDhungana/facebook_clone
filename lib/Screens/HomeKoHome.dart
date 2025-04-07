@@ -15,12 +15,11 @@ class HomekoHome extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 22,
-                    backgroundImage: NetworkImage(
-                        "https://www.bing.com/th?id=OIP.52ZHdlcqmVv4DgeeFwDtOwHaFj&w=254&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"),
+                    backgroundImage: AssetImage(
+                      "assets/mahesh_babu_profile.png",
+                    ),
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
+                  SizedBox(width: 10),
                   Expanded(
                     child: TextFormField(
                       decoration: InputDecoration(
@@ -32,8 +31,10 @@ class HomekoHome extends StatelessWidget {
                         ),
                         filled: true,
                         fillColor: Colors.grey[200],
-                        contentPadding:
-                            EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 15,
+                          vertical: 10,
+                        ),
                       ),
                     ),
                   ),
@@ -45,10 +46,7 @@ class HomekoHome extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(
-                        Icons.video_camera_back,
-                        color: Colors.red,
-                      ),
+                      Icon(Icons.video_camera_back, color: Colors.red),
                       Text("Live"),
                     ],
                   ),
@@ -60,10 +58,7 @@ class HomekoHome extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(
-                        Icons.photo_library_outlined,
-                        color: Colors.green,
-                      ),
+                      Icon(Icons.photo_library_outlined, color: Colors.green),
                       Text("Photo"),
                     ],
                   ),
@@ -75,20 +70,13 @@ class HomekoHome extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(
-                        Icons.location_on,
-                        color: Colors.red,
-                      ),
-                      Text("Live")
+                      Icon(Icons.location_on, color: Colors.red),
+                      Text("Live"),
                     ],
                   ),
                 ],
               ),
-              Divider(
-                height: 15,
-                thickness: 8,
-                color: Colors.grey[500],
-              ),
+              Divider(height: 15, thickness: 8, color: Colors.grey[500]),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SingleChildScrollView(
@@ -97,16 +85,17 @@ class HomekoHome extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         height: 190,
                         width: 130,
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://www.bing.com/th?id=OIP.52ZHdlcqmVv4DgeeFwDtOwHaFj&w=254&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+                              child: Image.asset(
+                                "assets/mahesh_babu_profile.png",
                                 width: 130,
                                 height: 120,
                                 fit: BoxFit.cover,
@@ -120,19 +109,20 @@ class HomekoHome extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                                top: 100,
-                                left: 48,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 40,
-                                    color: Colors.white,
-                                  ),
-                                ))
+                              top: 100,
+                              left: 48,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.add,
+                                  size: 40,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -142,14 +132,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/mahesh_babu_story.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -159,17 +150,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/mahesh_babu_profile_2.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -180,14 +176,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.i0eTz7eFINwHIBOrMtPY_wHaLG?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/image.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -197,17 +194,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.aG7NT0UXgv7goEQ0qySstQHaE8?rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/image.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -217,14 +219,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/image.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -234,17 +237,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/image.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -254,14 +262,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/image.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -271,17 +280,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/image.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -291,14 +305,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/image.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -308,17 +323,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/image.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -328,14 +348,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/image.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -345,17 +366,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/image.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -365,14 +391,15 @@ class HomekoHome extends StatelessWidget {
                         height: 190,
                         width: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.black)),
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                "https://th.bing.com/th/id/OIP.SirAPFlcnG1PwvB7wWrUwwHaKY?rs=1&pid=ImgDetMain",
+                              child: Image.asset(
+                                "assets/image.png",
                                 height: 300,
                                 width: 150,
                                 fit: BoxFit.cover,
@@ -382,17 +409,22 @@ class HomekoHome extends StatelessWidget {
                               top: 2,
                               left: 7,
                               child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.blue, width: 3)),
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        "https://th.bing.com/th/id/OIP.jAd2eZaR_nDjjwxAu55EMgHaIZ?w=1080&h=1224&rs=1&pid=ImgDetMain"),
-                                  )),
-                            )
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.blue,
+                                    width: 3,
+                                  ),
+                                ),
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "assets/image.png",
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -400,11 +432,7 @@ class HomekoHome extends StatelessWidget {
                   ),
                 ),
               ),
-              Divider(
-                height: 15,
-                thickness: 8,
-                color: Colors.grey[500],
-              ),
+              Divider(height: 15, thickness: 8, color: Colors.grey[500]),
 
               /**
                * Yaha bata chai Bastabik News Feed haru Hun Hai
@@ -414,25 +442,22 @@ class HomekoHome extends StatelessWidget {
               //Pahilo News Feed
               Row(
                 children: [
-                  SizedBox(
-                    width: 10,
-                  ),
+                  SizedBox(width: 10),
                   CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://th.bing.com/th/id/OIP.kaEBEyr5CQQ3G0R6euOwuwHaEd?rs=1&pid=ImgDetMain"),
+                    backgroundImage: AssetImage("assets/profile1.png"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Samikshya Adhikari"),
+                        Text("Pradip Khadka"),
                         Row(
                           children: [
                             Text("22 minutes ago"),
-                            Icon(Icons.public)
+                            Icon(Icons.public),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -450,11 +475,8 @@ class HomekoHome extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.network(
-                  "https://scontent.fktm6-1.fna.fbcdn.net/v/t39.30808-6/422665440_894204009167528_4925379261784803435_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=R0Al4JVx9L0Q7kNvgEjxcQC&_nc_oc=AdhwgvqUAHYZv3oiFffepMyFWchO9GLHGiwzx3cR56y8XAkIuSIbYhSrN5jsaY7e8Bd4ReP6j3eJtA4s6_Otx2iM&_nc_zt=23&_nc_ht=scontent.fktm6-1.fna&_nc_gid=A0fuIt-PSIA-XtdPgBH2kjs&oh=00_AYA5I4ValWvAqzUK9UmCuDuo5Nu0Gl1rDXUdEXV5EoJRBQ&oe=67AD3DDC"),
-              SizedBox(
-                height: 5,
-              ),
+              Image.asset("assets/image.png"),
+              SizedBox(height: 5),
               Row(
                 children: [
                   Container(
@@ -463,11 +485,7 @@ class HomekoHome extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     padding: EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.thumb_up,
-                      color: Colors.white,
-                      size: 15,
-                    ),
+                    child: Icon(Icons.thumb_up, color: Colors.white, size: 15),
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -475,30 +493,20 @@ class HomekoHome extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     padding: EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.favorite,
-                      color: Colors.white,
-                      size: 15,
-                    ),
+                    child: Icon(Icons.favorite, color: Colors.white, size: 15),
                   ),
                   Text("99K"),
                   Spacer(),
-                  Text("30K Comments")
+                  Text("30K Comments"),
                 ],
               ),
               Divider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Row(
-                    children: [Icon(Icons.thumb_up), Text("Like")],
-                  ),
-                  Row(
-                    children: [Icon(Icons.comment), Text("Comment")],
-                  ),
-                  Row(
-                    children: [Icon(Icons.share), Text("Share")],
-                  )
+                  Row(children: [Icon(Icons.thumb_up), Text("Like")]),
+                  Row(children: [Icon(Icons.comment), Text("Comment")]),
+                  Row(children: [Icon(Icons.share), Text("Share")]),
                 ],
               ),
               Divider(),
@@ -506,13 +514,8 @@ class HomekoHome extends StatelessWidget {
               //Dosro  News Feed
               Row(
                 children: [
-                  SizedBox(
-                    width: 10,
-                  ),
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://th.bing.com/th/id/OIP.B4f1x2kKBdSkhylzSxvC5wHaHa?rs=1&pid=ImgDetMain"),
-                  ),
+                  SizedBox(width: 10),
+                  CircleAvatar(backgroundImage: AssetImage("assets/image.png")),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: Column(
@@ -522,9 +525,9 @@ class HomekoHome extends StatelessWidget {
                         Row(
                           children: [
                             Text("53 minutes ago"),
-                            Icon(Icons.public)
+                            Icon(Icons.public),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -542,11 +545,8 @@ class HomekoHome extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.network(
-                  "https://i.pinimg.com/736x/bd/b2/37/bdb237d06abe0b5349cad66d220d3006.jpg"),
-              SizedBox(
-                height: 5,
-              ),
+              Image.asset("assets/image.png"),
+              SizedBox(height: 5),
               Row(
                 children: [
                   Container(
@@ -555,11 +555,7 @@ class HomekoHome extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     padding: EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.thumb_up,
-                      color: Colors.white,
-                      size: 15,
-                    ),
+                    child: Icon(Icons.thumb_up, color: Colors.white, size: 15),
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -567,30 +563,20 @@ class HomekoHome extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     padding: EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.favorite,
-                      color: Colors.white,
-                      size: 15,
-                    ),
+                    child: Icon(Icons.favorite, color: Colors.white, size: 15),
                   ),
                   Text("60K"),
                   Spacer(),
-                  Text("4K Comments")
+                  Text("4K Comments"),
                 ],
               ),
               Divider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Row(
-                    children: [Icon(Icons.thumb_up), Text("Like")],
-                  ),
-                  Row(
-                    children: [Icon(Icons.comment), Text("Comment")],
-                  ),
-                  Row(
-                    children: [Icon(Icons.share), Text("Share")],
-                  )
+                  Row(children: [Icon(Icons.thumb_up), Text("Like")]),
+                  Row(children: [Icon(Icons.comment), Text("Comment")]),
+                  Row(children: [Icon(Icons.share), Text("Share")]),
                 ],
               ),
               Divider(),
