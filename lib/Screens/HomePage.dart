@@ -1,7 +1,7 @@
 import 'package:facebook_clone_up/Screens/FriendPage.dart';
 import 'package:facebook_clone_up/Screens/HomeKoHome.dart';
 // import 'package:facebook_clone_up/crop_image/crop_image2.dart';
-import 'package:facebook_clone_up/crop_image/image_crop.dart';
+import 'package:facebook_clone_up/other_practicing/crop_image/image_crop.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
