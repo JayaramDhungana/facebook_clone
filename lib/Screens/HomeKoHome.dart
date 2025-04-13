@@ -509,7 +509,13 @@ class HomekoHome extends StatelessWidget {
                   Row(children: [Icon(Icons.share), Text("Share")]),
                 ],
               ),
-              Divider(),
+              SizedBox(height: 10),
+              //Bichako Khali Thauko ho
+              Container(
+                height: 10,
+                width: MediaQuery.of(context).size.width,
+                color: Color.fromRGBO(158, 158, 158, 1),
+              ),
 
               //Dosro  News Feed
               Row(
@@ -579,7 +585,13 @@ class HomekoHome extends StatelessWidget {
                   Row(children: [Icon(Icons.share), Text("Share")]),
                 ],
               ),
-              Divider(),
+              SizedBox(height: 10),
+              //Bichako Khali Thauko ho
+              Container(
+                height: 10,
+                width: MediaQuery.of(context).size.width,
+                color: Color.fromRGBO(158, 158, 158, 1),
+              ),
             ],
           ),
         ),

@@ -38,6 +38,7 @@ dependencies:
   crop_image: ^1.0.16
   crop_your_image: ^2.0.0
   flutter_riverpod: ^2.6.1
+  
 
 
 dev_dependencies:

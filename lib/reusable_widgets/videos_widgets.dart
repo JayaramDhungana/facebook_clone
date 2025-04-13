@@ -1,3 +1,4 @@
+import 'package:facebook_clone_up/reusable_widgets/like_comment_share_widgets.dart';
 import 'package:flutter/material.dart';
 
 Column videoWidget({
@@ -13,7 +14,7 @@ Column videoWidget({
     children: [
       //mathiko photo name follow ra three dot ko lagi matra
       Padding(
-        padding: const EdgeInsets.only(top: 20, left: 20, bottom: 10),
+        padding: const EdgeInsets.only(top: 20, left: 20, bottom: 20),
         child: Container(
           child: Row(
             children: [
@@ -29,7 +30,7 @@ Column videoWidget({
                 children: [
                   Row(
                     children: [
-                      Text("Aya Kimura"),
+                      Text(name),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Container(
@@ -77,14 +78,28 @@ Column videoWidget({
                 ],
               ),
               Spacer(),
+              PopupMenuButton(
+                itemBuilder: (BuildContext context) {
+                  return [PopupMenuItem(child: Text("Hello Sathi ke xa"))];
+                },
+              ),
               Padding(
                 padding: const EdgeInsets.only(right: 8),
-                child: Icon(Icons.menu),
+                child: Icon(Icons.close),
               ),
             ],
           ),
         ),
       ),
+      Padding(
+        padding: const EdgeInsets.only(left: 25),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [Text("मैं कभी कम नहीं सोचता... हमेशा बड़ा सोचता हूँ!")],
+        ),
+      ),
+      thumbnail,
+      likeCommentShareWidget(likeCount: likers, commentCount: commentrs),
     ],
   );
 }
